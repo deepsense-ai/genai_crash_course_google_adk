@@ -1,7 +1,7 @@
 import httpx
 
 def fetch_url(url: str) -> str:
-    """This probably shuould be updated."""
+    """This probably should be updated."""
     with httpx.Client(follow_redirects=True) as client:
         response = client.get(url)
         response.raise_for_status()
