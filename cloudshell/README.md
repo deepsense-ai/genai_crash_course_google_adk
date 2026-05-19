@@ -1,9 +1,4 @@
-
-
-
-
-
-# Introduction to Google Agent Development Kit (ADK)
+# Introduction to Google Agent Development Kit (ADK) in CloudShell
 
 This tutorial walks you through creating your first AI agent using [Google ADK](https://google.github.io/adk-docs/) and extending it with custom tools. We'll use [Cloud Shell](https://cloud.google.com/shell) as our development environment and [Vertex AI](https://cloud.google.com/vertex-ai) as the model backend.
 
