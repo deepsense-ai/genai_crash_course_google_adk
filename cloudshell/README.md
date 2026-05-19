@@ -10,11 +10,9 @@ This tutorial walks you through creating your first AI agent using [Google ADK](
 
 ## Create an agent
 
-Create a new directory for your project and initialize it with `uv`:
+Make sure you are in `cloudshell` directory and initialize it with `uv`:
 
 ```bash
-mkdir agent-project
-cd agent-project
 uv init
 ```
 
@@ -27,7 +25,7 @@ uv add google-adk
 Now scaffold a new agent named `agent`:
 
 ```bash
-uv run adk create agent
+uv run adk create myagent
 ```
 
 The `adk create` command walks you through a few setup questions:
@@ -38,7 +36,7 @@ The `adk create` command walks you through a few setup questions:
 
 > **Tip:** You can switch between models in `.env` file. Keep in mind that preview models on Vertex AI are provided as-is and could undergo non-backwards-compatible changes.
 
-The command creates a new `agent/` directory with several files, including `agent.py`:
+The command creates a new `myagent/` directory with several files, including `agent.py`:
 
 ```python
 from google.adk.agents import Agent
@@ -56,7 +54,7 @@ root_agent = Agent(
 Launch the Agent with command
 
 ```bash
-uv run adk run agent
+uv run adk run myagent
 ```
 
 You may notice some warnings about [EXPERIMENTAL] features user for `InMemoryCredentialService`. We can ignore those now.
@@ -71,7 +69,7 @@ Launch the ADK web UI with hot-reloading enabled. Since we're using Cloud Shell,
 uv run adk web --reload_agents --allow_origins="*"
 ```
 
-This starts a local web server and opens the ADK web UI in your browser. The `--reload_agents` flag makes sure that any changes you make to your agent's code are automatically picked up by the server. You can now chat with your agent.
+This starts a local web server and opens the ADK web UI in your browser. The `--reload_agents` flag makes sure that any changes you make to your agent's code are automatically picked up by the server. You can now chat with your agent. Make sure you choose `agent` 
 
 ## Adding tools to your agent
 
@@ -81,7 +79,7 @@ Agents become much more useful when they can interact with the outside world. By
 
 Let's create a Python function that fetches the content of a URL and add it to the agent's toolbox.
 
-Install the `httpx` library. From your `agent-project` directory:
+Install the `httpx` library. From your `cloudshell` directory:
 
 ```bash
 uv add httpx
@@ -107,7 +105,7 @@ uv run python fetch.py
 
 This will fetch https://www.example.com and extract the content of first `h1` header.
 
-Based on what you lernt from previous workshops, update `agent/agent.py`  to enable agent to use a `fetch_url` tool. (feel free to copy over fetch_url code)
+Based on what you lernt from previous workshops, update `myagent/agent.py`  to enable agent to use a `fetch_url` tool. (feel free to copy over fetch_url code)
 Now update to look like this:
 
 The key parts:
