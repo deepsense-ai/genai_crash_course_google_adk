@@ -24,12 +24,15 @@ ml_tracker/
 
 You can test out your solution by running 
 
-    ```bash
-    uv run adk web --reload_agents --allow_origins="*"
-    ```
+```bash
+uv run adk web --reload_agents --allow_origins="*"
+```
 
-Make sure `ml_tracker` agent is active and ask few queries:
+Open running `adk web` preview in cloudshell and make sure `ml_tracker` agent is active and ask few queries:
 
-`Show me the results of experiment EXP-042`
-`Compare EXP-042 with EXP-017`
-`Deploy EXP-042 to staging`
+```bash
+- Show me the results of experiment EXP-042
+- Compare EXP-042 with EXP-017
+- Deploy EXP-042 to staging
+``` 
+
