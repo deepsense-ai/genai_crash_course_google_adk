@@ -69,7 +69,7 @@ Launch the ADK web UI with hot-reloading enabled. Since we're using Cloud Shell,
 uv run adk web --reload_agents --allow_origins="*"
 ```
 
-This starts a local web server and opens the ADK web UI in your browser. The `--reload_agents` flag makes sure that any changes you make to your agent's code are automatically picked up by the server. You can now chat with your agent. Make sure you choose `agent` 
+This starts a local web server and opens the ADK web UI in your browser. The `--reload_agents` flag makes sure that any changes you make to your agent's code are automatically picked up by the server. You can now chat with your agent. **Make sure you choose `myagent`**  in top left part of the GUI (`Select an app`).
 
 ## Adding tools to your agent
 
